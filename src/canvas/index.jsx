@@ -9,9 +9,16 @@ const CanvasModel = () => {
     <Canvas>
       <ambientLight intensity={0.5} />
       <Environment preset="city" />
-      {/* <Shirt />
-      <CameraRig />
-      <Backdrop /> */}
+
+      {/* <CameraRig>
+        <Backdrop /> */}
+      <Center>
+        <Shirt />
+      </Center>
+      {/* </CameraRig> */}
+      {/*
+    
+    */}
     </Canvas>
   );
 };
