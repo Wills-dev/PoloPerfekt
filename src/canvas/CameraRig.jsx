@@ -23,7 +23,7 @@ const CameraRig = ({ children }) => {
       else targetPosition = [0, 0, 2];
     }
 
-    // setting the model camera position
+    // set model camera position
     easing.damp3(state.camera.position, targetPosition, 0.25, delta);
 
     // set the model rotation smoothly
