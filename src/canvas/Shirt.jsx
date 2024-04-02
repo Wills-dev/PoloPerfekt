@@ -11,9 +11,6 @@ const Shirt = () => {
   const snap = useSnapshot(state);
   const { nodes, materials } = useGLTF("/shirt_baked.glb");
 
-  console.log("Nodes:", nodes);
-  console.log("Materials:", materials);
-
   const logoTexture = useTexture(snap.logoDecal);
   const fullTexture = useTexture(snap.fullDecal);
 
@@ -35,9 +32,9 @@ const Shirt = () => {
         {" "}
         {snap.isFullTexture && (
           <Decal
-            position={[0, 0, 0]}
+            position={[0.1, -0.1, 0]}
             rotation={[0, 0, 0]}
-            scale={1}
+            scale={1.1}
             map={fullTexture}
           />
         )}
@@ -47,7 +44,7 @@ const Shirt = () => {
             rotation={[0, 0, 0]}
             scale={0.15}
             map={logoTexture}
-            map-anisotropy={16}
+            // map-anisotropy={16}
             depthTest={false}
             depthWrite={true}
           />
